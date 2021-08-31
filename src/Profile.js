@@ -5,7 +5,14 @@ class Profile extends Component {
   render() {
     /* TODO: render information about logged in user */
     /* STRETCH TODO: if no logged in user then redirect home */
-    return <p>Profile page coming soon</p>;
+    return (
+      <>
+      <h2>{this.props.email}</h2>
+      {/* <h2>{this.props.username}</h2> */}
+      </>
+    )
+      
+
   }
 }
 
