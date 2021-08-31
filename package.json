@@ -13,7 +13,7 @@
     "react-cookie": "4.0.3",
     "react-cookies": "0.1.1",
     "react-dom": "^17.0.1",
-    "react-router-dom": "^5.2.0",
+    "react-router-dom": "^5.2.1",
     "react-scripts": "4.0.3",
     "web-vitals": "1.1.0"
   },
@@ -52,6 +52,5 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/SarahCreager/can-of-books-frontend/issues"
-  },
-  "homepage": "https://github.com/SarahCreager/can-of-books-frontend#readme"
+  }
 }
