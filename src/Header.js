@@ -1,7 +1,7 @@
 import React from 'react';
 import { Navbar, NavItem } from 'react-bootstrap';
-import { Link } from "react-router-dom";
-// import './header.css';
+import { Link } from 'react-router-dom';
+import './Header.css';
 
 class Header extends React.Component {
   render() {
@@ -12,7 +12,7 @@ class Header extends React.Component {
         {/* TODO: if the user is logged in, render a navigation link to profile page */}
         {/* TODO: if the user is logged in, render the `LogoutButton` */}
       </Navbar>
-    )
+    );
   }
 }
 
