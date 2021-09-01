@@ -1,4 +1,4 @@
-import { Component } from "react";
+import { Component } from 'react';
 
 class LogoutButton extends Component {
 
@@ -9,6 +9,6 @@ class LogoutButton extends Component {
       </button>
     );
   }
-};
+}
 
 export default LogoutButton;

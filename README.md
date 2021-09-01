@@ -1,37 +1,55 @@
 # Project Name
 
 **Author**: Marquesa Asmussen, Kyle Cohen, and Sarah Creager
-**Version**: 1.0.0 (increment the patch/fix version number if you make more commits past your first submission)
+**Version**: 1.0.1 (increment the patch/fix version number if you make more commits past your first submission)
 
 ## Overview
 <!-- Provide a high level overview of what this application is and why you are building it, beyond the fact that it's an assignment for this class. (i.e. What's your problem domain?) -->
+When the user logs in, this application displays a list of books pulled from the server api, along with a user profile and log out button.
+
 
 ## Getting Started
 <!-- What are the steps that a user must take in order to build this app on their own machine and get it running? -->
 
+Getting started you will need to install React, React Bootstrap, Axios, express, dotenv, cors.
+
 ## Architecture
 <!-- Provide a detailed description of the application design. What technologies (languages, libraries, etc) you're using, and any other relevant design information. -->
+
+Architecture
+Languages used: Javascript, CSS, HTML
+Libraries used: Mongoose, React, React Bootstrap,
+Database: MongoDB
+Framework: Express, Node.js
+Cloud Deployment: Netlify, Heroku
 
 ## Change Log
 <!-- Use this area to document the iterative changes made to your application as each feature is successfully implemented. Use time stamps. Here's an example:
 
-01-01-2001 4:59pm - Application now has a fully-functional express server, with a GET route for the location resource. -->
+08-31-2021 4:59pm - Application now has a fully-functional express server, with a GET route for the location resource. -->
 
-Name of feature: _______________________________
-
-Estimate of time needed to complete: _____
-
-Start time: _____
-
-Finish time: _____
-
-Actual time needed to complete: _____
+08-31-2021 5:49pm - Application now has a login form, profile, and book list with a GET route to our server api.
 
 ## Estimates
 <!-- See below -->
 
+Name of feature: Trello card 3 (Book Component)
+Estimate of time needed to complete: 4 hour
+
+Start time 8/31/21: 1:15 (Tuesday)
+Finish time 8/31/21: 5:45 pm (Tuesday)
+Actual time needed to complete: 4 hours 30 min
+
 ## Credit and Collaborations
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->
+* [JB Tellez (Code Fellows Instructor)](https://www.linkedin.com/in/jb-tellez/)
+* [Chance Harmon (Code Fellows TA)](https://www.linkedin.com/in/chance-harmon/)
+* [Kristian Esvelt (Code Fellows TA)](https://www.linkedin.com/in/kristianesvelt/)
+* [Riva Davidowski (Code Fellows TA)](https://www.linkedin.com/in/riva-davidowski-rivad/)
+* [Hexx King (Code Fellows TA)](https://www.linkedin.com/in/hexx-king/)
+* [.gitignore code](https://www.gitignore.io/api/node,linux,macos,windows,visualstudiocode)
+* [eslintrc.json code](https://github.com/codefellows/seattle-code-201d77/blob/main/configs/eslintrc.json)
+* [Trello](https://trello.com/b/7Qips1UC/lab-week-2-code-301)
 
 ### Logistical:
 
