@@ -16,6 +16,7 @@ export default class Book extends Component {
           <h3>{this.props.title}</h3>
           <p>{this.props.description}</p>
           <p>{this.props.status}</p>
+          <button onClick={() => this.props.onUpdateModal(this.props.book)}>Update Book</button>
           <button onClick={() => this.props.onDelete(this.props.book)}>Delete Book</button>
         </Carousel.Caption>
       </>

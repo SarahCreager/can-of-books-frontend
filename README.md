@@ -1,11 +1,11 @@
 # Project Name Can-Of-Books
 
 **Author**: Marquesa Asmussen, Kyle Cohen, and Sarah Creager
-**Version**: 1.0.3 (increment the patch/fix version number if you make more commits past your first submission)
+**Version**: 1.0.4 (increment the patch/fix version number if you make more commits past your first submission)
 
 ## Overview
 <!-- Provide a high level overview of what this application is and why you are building it, beyond the fact that it's an assignment for this class. (i.e. What's your problem domain?) -->
-When the user logs in, this application displays a list of books pulled from the server api, along with a user profile and log out button.
+When the user logs in, this application displays a list of books pulled from the server api, along with a user profile and log out button. User can add a book, update, and delete books ont he bookshelf.
 
 
 ## Getting Started
@@ -31,6 +31,7 @@ Cloud Deployment: Netlify, Heroku
 08-31-2021 5:49pm - Application now has a login form, profile, and book list with a GET route to our server api.
 
 08-31-2021 11:00pm - Application now has a carousel that displays books, form to add new books, and ability to delete books.
+09-01-2021 3:30pm - Application now has working “update/delete book on bookshelf” functionality
 
 ## Estimates
 <!-- See below -->
@@ -54,6 +55,12 @@ Start time: __9:30pm___
 Finish time: __11pm___
 Actual time needed to complete: __1 hour 30 min___
 ---------------------------------------------------
+Name of feature: Trello Lab 13/card 1/2 (Add update)
+Estimate of time needed to complete: 2 hours
+Start time: 4:30pm
+Finish time: 6:30pm
+Actual time needed to complete: 2 hr
+
 ## Credit and Collaborations
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->
 * [JB Tellez (Code Fellows Instructor)](https://www.linkedin.com/in/jb-tellez/)
