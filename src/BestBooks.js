@@ -49,15 +49,14 @@ class BestBooks extends React.Component {
     const server = `${server_PORT}/books/${bookToDelete._id}`;
     await axios.delete(server);
     // TODO: need to sort out conditional to make sure users email matches booktodelete email)
-    if (bookToDelete.email){
+    try {
       const books = this.state.books.filter(candidate => candidate._id !== bookToDelete._id);
       this.setState({ books });
-      alert(bookToDelete.title +' has been deleted');
-    } else {
+      alert(bookToDelete.title + ' has been deleted');
+    } catch (error) {
       console.log('error');
     }
   };
-
 
   render() {
 
@@ -75,10 +74,10 @@ class BestBooks extends React.Component {
                   title={book.title}
                   description={book.description}
                   status={book.status}
-                  email={book.email}>
+                  email={book.email}
+                  onDelete={this.handleDelete}
+                  book={book}>
                 </Book>
-                {/* TODO: Delete Not working on Carousel */}
-                <p onClick={() => this.onDelete(book)}>[X]</p>
               </Carousel.Item>
             );
           })}

@@ -8,7 +8,7 @@ export default class AddBookButton extends Component {
   render() {
 
     return (
-      <Button variant="secondary" size="lg"
+      <Button id="addABookButton" variant="secondary" size="lg"
         onClick={this.props.onButtonClick}>
         Create a Book
       </Button>
