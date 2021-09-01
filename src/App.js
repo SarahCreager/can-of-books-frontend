@@ -10,16 +10,14 @@ import {
   Route
 } from 'react-router-dom';
 import BestBooks from './BestBooks';
-import BookFormModal from './BookFormModal';
-import AddBookButton from './AddBookButton';
+
 
 class App extends React.Component {
 
   constructor(props) {
     super(props);
     this.state = {
-      user: null,
-      showBookForm: false,
+      user: null
     };
   }
 
@@ -36,11 +34,6 @@ class App extends React.Component {
     });
   }
 
-  showBookFormHandler = () => {
-    this.setState({
-      showBookForm: true
-    });
-  }
 
   render() {
     return (
@@ -55,9 +48,6 @@ class App extends React.Component {
             {/* DONE: add a route with a path of '/profile' that renders a `Profile` component */}
             <Route path="/profile">
               {this.state.user ? <Profile user={this.state.user} /> : <h3>No Profile Found </h3>}
-            </Route>
-            <Route path="/create">
-              {this.state.showBookForm ? <BookFormModal /> : <AddBookButton onButtonClick={this.showBookFormHandler}/>}
             </Route>
           </Switch>
           <Footer />

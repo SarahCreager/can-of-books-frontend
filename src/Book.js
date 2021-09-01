@@ -1,20 +1,22 @@
 import { Component } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
-
+import CarouselImg from './assets/carouselImg.jpg';
 
 export default class Book extends Component {
   render() {
     return (
-      <Carousel>
-        <Carousel.Item>
-          <Carousel.Caption>
-            <h3>{this.props.title}</h3>
-            <p>{this.props.description}</p>
-            <p>{this.props.status}</p>
-            <p>{this.props.email}</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-      </Carousel>
+      <>
+        <img
+          className="d-block w-100"
+          src={CarouselImg}
+          alt="img of book"
+        />
+        <Carousel.Caption>
+          <h3>{this.props.title}</h3>
+          <p>{this.props.description}</p>
+          <p>{this.props.status}</p>
+        </Carousel.Caption>
+      </>
     );
   }
 }
