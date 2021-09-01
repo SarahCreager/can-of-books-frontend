@@ -17,34 +17,23 @@ class App extends React.Component {
     super(props);
     this.state = {
       user: null,
-      email: '',
-      username: ''
     };
   }
 
-  loginHandler = (user) => {
+  loginHandler = (user, event) => {
+    event.preventDefault();
     this.setState({
-      user,
+      user
     });
   }
 
   logoutHandler = () => {
     this.setState({
-      user: null,
+      user: null
     });
   }
-  
-  formInputHandler = (event) => {
-    this.setState({
-      email: event.target.formEmail.value,
-      username: event.target.formUsername.value,
-      // username: event.target.username
-    });
-  }
-
 
   render() {
-    console.log(this.state.user);
     return (
       <>
         <Router>
@@ -52,11 +41,11 @@ class App extends React.Component {
           <Switch>
             <Route exact path="/">
               {/* DONE: if the user is logged in, render the `BestBooks` component, if they are not, render the `Login` component */}
-              {this.state.user ? <BestBooks/> : <Login onLoginSubmit={this.loginHandler} handleFormInput={this.formInputHandler} email={this.state.email}/>}
+              {this.state.user ? <BestBooks /> : <Login onLoginSubmit={this.loginHandler} handleFormInput={this.formInputHandler} />}
             </Route>
             {/* DONE: add a route with a path of '/profile' that renders a `Profile` component */}
             <Route path="/profile">
-              <Profile email={this.state.email}/>
+              {this.state.user ? <Profile user={this.state.user} /> : <h3>No Profile Found </h3>}
             </Route>
           </Switch>
           <Footer />

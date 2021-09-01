@@ -9,15 +9,15 @@ class Header extends React.Component {
   render() {
     return (
       <>
-      <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-        <Navbar.Brand>My Favorite Books</Navbar.Brand>
+        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+          <Navbar.Brand>My Favorite Books</Navbar.Brand>
 
-        <NavItem><Link to="/" className="nav-link">Home</Link></NavItem>
-        {this.props.user ? (<NavItem><Link to="/profile" className="nav-link">Profile</Link></NavItem>) : null}
-        {/* DONE: if the user is logged in, render a navigation link to profile page */}
-        {this.props.user ? <LogoutButton/> : null};
-        {/* TODO: if the user is logged in, render the `LogoutButton` */}
-      </Navbar>
+          <NavItem><Link to="/" className="nav-link">Home</Link></NavItem>
+          {this.props.user ? (<NavItem><Link to="/profile" className="nav-link">Profile</Link></NavItem>) : null}
+          {/* DONE: if the user is logged in, render a navigation link to profile page */}
+          {this.props.user ? <LogoutButton onLogout={this.props.onLogout}/> : null};
+          {/* DONE: if the user is logged in, render the `LogoutButton` */}
+        </Navbar>
       </>
     );
   }
