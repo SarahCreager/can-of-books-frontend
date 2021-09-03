@@ -5,6 +5,7 @@ import BookFormModal from './BookFormModal';
 import AddBookButton from './AddBookButton';
 import Carousel from 'react-bootstrap/Carousel';
 import UpdateBook from './UpdateBook';
+import { withAuth0 } from '@auth0/auth0-react';
 
 const server_PORT = process.env.REACT_APP_BACKEND_URL;
 
@@ -14,7 +15,10 @@ class BestBooks extends React.Component {
     this.state = {
       books: [],
       showBookForm: false,
-      selectedBook: null
+      selectedBook: null,
+      title: this.props.book.title ? this.props.book.title : '',
+      description: this.props.book.description ? this.props.book.description : '',
+      status: this.props.book.status ? this.props.book.status : '',
     };
   }
 
@@ -22,6 +26,12 @@ class BestBooks extends React.Component {
     this.setState({
       showBookForm: true
     });
+  }
+
+  closeBookForm = () => {
+    this.setState({
+      showBookForm: false
+    })
   }
 
   /* DONE: Make a GET request to your API to fetch books for the logged in user  */
@@ -39,13 +49,38 @@ class BestBooks extends React.Component {
     this.getBooks();
   }
 
-  handleCreate = async (bookInfo) => {
-    const server = `${server_PORT}/books`;
-    const response = await axios.post(server, bookInfo);
-    const newBook = response.data;
-    const books = [...this.state.books, newBook];
+  addBook = async (book) => {
+    const books = [...this.state.books, book];
     this.setState({ books });
   };
+
+  createBook = () => {
+    this.props.auth0.getIdTokenClaims()
+      .then(async res => {
+        const jwt = res.__raw;
+
+        const config = {
+          headers: { "Authorization": `Bearer ${jwt}` },
+          data: {
+            email: this.props.auth0.user.email,
+            title: this.state.title,
+            description: this.state.description,
+            status: this.state.status,
+          },
+          baseURL: process.env.REACT_APP_BACKEND_URL,
+          url: '/books',
+          method: 'post'
+        }
+
+        const bookResults = await axios(config);
+        this.closeBookForm();
+        this.addBook(bookResults.data);
+      })
+      .catch(err => console.error(err));
+  }
+
+
+
 
 
   handleUpdateModal = (book) => {
@@ -122,4 +157,4 @@ class BestBooks extends React.Component {
   }
 }
 
-export default BestBooks;
+export default withAuth0(BestBooks);

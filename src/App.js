@@ -4,6 +4,7 @@ import Footer from './Footer';
 import Profile from './Profile';
 import Login from './Login';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { withAuth0 } from '@auth0/auth0-react';
 import {
   BrowserRouter as Router,
   Switch,
@@ -39,16 +40,20 @@ class App extends React.Component {
     return (
       <>
         <Router>
-          <Header user={this.state.user} onLogout={this.logoutHandler} />
+
+          {/* <Header user={this.state.user} onLogout={this.logoutHandler} /> */}
+          <Header/>
+
           <Switch>
             <Route exact path="/">
-              {/* DONE: if the user is logged in, render the `BestBooks` component, if they are not, render the `Login` component */}
-              {this.state.user ? <BestBooks /> : <Login onLoginSubmit={this.loginHandler} handleFormInput={this.formInputHandler} />}
+              {this.props.auth0.isAuthenticated ? <BestBooks /> : <Login onLoginSubmit={this.loginHandler} handleFormInput={this.formInputHandler} />}
             </Route>
-            {/* DONE: add a route with a path of '/profile' that renders a `Profile` component */}
+
             <Route path="/profile">
-              {this.state.user ? <Profile user={this.state.user} /> : <h3>No Profile Found </h3>}
+              {/* {this.state.user ? <Profile user={this.state.user} /> : <h3>No Profile Found </h3>} */}
+            <Profile/>
             </Route>
+            
           </Switch>
           <Footer />
         </Router>
@@ -57,4 +62,4 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default withAuth0(App);
