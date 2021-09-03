@@ -15,25 +15,25 @@ import BestBooks from './BestBooks';
 
 class App extends React.Component {
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      user: null
-    };
-  }
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     user: null
+  //   };
+  // }
 
-  loginHandler = (user, event) => {
-    event.preventDefault();
-    this.setState({
-      user
-    });
-  }
+  // loginHandler = (user, event) => {
+  //   event.preventDefault();
+  //   this.setState({
+  //     user
+  //   });
+  // }
 
-  logoutHandler = () => {
-    this.setState({
-      user: null
-    });
-  }
+  // logoutHandler = () => {
+  //   this.setState({
+  //     user: null
+  //   });
+  // }
 
 
   render() {
@@ -42,7 +42,7 @@ class App extends React.Component {
         <Router>
 
           {/* <Header user={this.state.user} onLogout={this.logoutHandler} /> */}
-          <Header/>
+          <Header />
 
           <Switch>
             <Route exact path="/">
@@ -51,9 +51,11 @@ class App extends React.Component {
 
             <Route path="/profile">
               {/* {this.state.user ? <Profile user={this.state.user} /> : <h3>No Profile Found </h3>} */}
-            <Profile/>
+              <Profile />
             </Route>
-            
+            <Route path="/test">
+              <h2>this is a test route</h2>
+            </Route>
           </Switch>
           <Footer />
         </Router>
