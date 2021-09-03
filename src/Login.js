@@ -36,9 +36,9 @@ class Login extends React.Component {
 
             {/* {this.state.showForm ? <LoginForm onLoginSubmit={this.props.onLoginSubmit}/> :  */}
 
-            <LoginButton/>
+            <LoginButton />
 
-              {/* onButtonClick={this.showFormHandler} /> */}
+            {/* onButtonClick={this.showFormHandler} /> */}
           </Card.Body>
         </Card>
       </>

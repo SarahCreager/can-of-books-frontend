@@ -16,9 +16,9 @@ class Header extends React.Component {
 
           <NavItem><Link to="/" className="nav-link">Home</Link></NavItem>
           {this.props.auth0.isAuthenticated ? (<NavItem><Link to="/profile" className="nav-link">Profile</Link></NavItem>) : null}
-          
+
           {this.props.auth0.isAuthenticated ? <LogoutButton/> : <LoginButton/>}
-          
+
         </Navbar>
       </>
     );

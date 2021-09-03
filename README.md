@@ -1,24 +1,24 @@
 # Project Name Can-Of-Books
 
 **Author**: Marquesa Asmussen, Kyle Cohen, and Sarah Creager
-**Version**: 1.0.4 (increment the patch/fix version number if you make more commits past your first submission)
+**Version**: 1.0.5 (increment the patch/fix version number if you make more commits past your first submission)
 
 ## Overview
 <!-- Provide a high level overview of what this application is and why you are building it, beyond the fact that it's an assignment for this class. (i.e. What's your problem domain?) -->
-When the user logs in, this application displays a list of books pulled from the server api, along with a user profile and log out button. User can add a book, update, and delete books ont he bookshelf.
+When the user logs in with Auth0, this application displays a list of books pulled from the server api, along with a user profile and log out button. User can add a book, update, and delete books ont he bookshelf.
 
 
 ## Getting Started
 <!-- What are the steps that a user must take in order to build this app on their own machine and get it running? -->
 
-Getting started you will need to install React, React Bootstrap, Axios, express, dotenv, cors.
+Getting started you will need to install React, React Bootstrap, Axios, express, dotenv, cors, Auth0.
 
 ## Architecture
 <!-- Provide a detailed description of the application design. What technologies (languages, libraries, etc) you're using, and any other relevant design information. -->
 
 Architecture
 Languages used: Javascript, CSS, HTML
-Libraries used: Mongoose, React, React Bootstrap,
+Libraries used: Mongoose, React, React Bootstrap, Auth 0
 Database: MongoDB
 Framework: Express, Node.js
 Cloud Deployment: Netlify, Heroku
@@ -32,6 +32,7 @@ Cloud Deployment: Netlify, Heroku
 
 08-31-2021 11:00pm - Application now has a carousel that displays books, form to add new books, and ability to delete books.
 09-01-2021 3:30pm - Application now has working “update/delete book on bookshelf” functionality
+09-02-2021 3:30pm - Application now has working Auth0
 
 ## Estimates
 <!-- See below -->
@@ -60,6 +61,12 @@ Estimate of time needed to complete: 2 hours
 Start time: 4:30pm
 Finish time: 6:30pm
 Actual time needed to complete: 2 hr
+---------------------------------------------------
+Name of feature: Trello Lab 14/card 1 (Add Auth0)
+Estimate of time needed to complete: 5 hours
+Start time: 1:30pm
+Finish time: 10:30pm
+Actual time needed to complete: 9 hrs
 
 ## Credit and Collaborations
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->
